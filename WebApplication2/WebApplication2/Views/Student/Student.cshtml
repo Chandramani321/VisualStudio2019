@@ -1,0 +1,155 @@
+﻿
+@model WebApplication2.Models.StudentModel
+@{
+  ViewBag.Title = "Student Registration Page";
+}
+<h2>MVC Core Application</h2>
+@using (Html.BeginForm()) {
+  @Html.AntiForgeryToken()
+  <div class="form-horizontal">
+    <h4>Student Registration Page</h4> <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+      @Html.LabelFor(model => model.RollNo, htmlAttributes: new {
+          @class = "control-label colmd-2"
+      })
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.RollNo, new {
+       htmlAttributes = new {
+           @class = "formcontrol"
+       }
+   })
+        @Html.ValidationMessageFor(model => model.RollNo, "", new { @class = "text-danger" })
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.FirstName, htmlAttributes: new {
+          @class = "control-label col - md - 2"
+      })
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.FirstName, new {
+            htmlAttributes = new {
+            @class =
+        "form-control"
+            }
+        })
+        @Html.ValidationMessageFor(model => model.FirstName, "", new {
+            @class = "textdanger"
+        })
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.LastName, htmlAttributes: new {
+          @class = "control-label col - md - 2"
+      })
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.LastName, new {
+            htmlAttributes = new {
+            @class =
+        "form-control"
+            }
+        })
+        @Html.ValidationMessageFor(model => model.LastName, "", new {
+            @class = "textdanger"
+        })
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.Address, htmlAttributes: new {
+          @class = "control-label colmd-2"
+      })
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.Address, new {
+       htmlAttributes = new {
+           @class = "formcontrol"
+       }
+   })
+        @Html.ValidationMessageFor(model => model.Address, "", new {
+            @class = "text-danger"
+        })
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.Class, htmlAttributes: new {
+          @class = "control-label colmd-2"
+      })
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.Class, new {
+       htmlAttributes = new {
+           @class = "formcontrol"
+       }
+   })
+        @Html.ValidationMessageFor(model => model.Class, "", new { @class = "text-danger" })
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.Age, htmlAttributes: new {
+          @class = "control-label col-md-2"
+      })
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.Age, new {
+       htmlAttributes = new {
+           @class = "formcontrol"
+       }
+   })
+        @Html.ValidationMessageFor(model => model.Age, "", new { @class = "text-danger" })
+      </div>
+    </div>
+    <div class="form-group">
+      @Html.LabelFor(model => model.ContactNo, htmlAttributes: new {
+          @class = "control-labelcol - md - 2"
+      })
+      <div class="col-md-10">
+        @Html.EditorFor(model => model.ContactNo, new {
+            htmlAttributes = new {
+            @class =
+        "form-control"
+            }
+        })
+        @Html.ValidationMessageFor(model => model.ContactNo, "", new {
+            @class = "textdanger"
+        })
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Register" class="btn btn-default" />
+      </div>
+      <div class="col-md-offset-2 col-md-10 text-success">
+        <h3>@ViewBag.Txt1</h3>
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        <h4>@ViewBag.Txt2</h4>
+      </div>
+      <br>
+      <div class="col-md-offset-2 col-md-10">
+        @ViewBag.Txt3xxx
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        @ViewBag.Txt4
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        @ViewBag.Txt5
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        @ViewBag.Txt6
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        @ViewBag.Txt7
+      </div>
+      <div class="col-md-offset-2 col-md-10">
+        @ViewBag.Txt8
+      </div>
+      <br>
+      <div class="col-md-offset-2 col-md-10 text-capitalize">
+        <h4>@ViewBag.Txt9</h4>
+      </div>
+    </div>
+  </div>
+}
+<div>
+  @Html.ActionLink("Back to List", "Index")
+</div>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

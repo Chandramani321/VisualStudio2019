@@ -1,0 +1,28 @@
+﻿body {
+  background-color:whitesmoke;
+}
+a{
+  text-decoration:none;
+
+}
+.footerlinks{
+  color:white;
+  text-decoration:none !important
+
+}
+.footerlinks:hover{
+  color:#ffd800;
+}
+#footer1{
+  background-color:#762b00;
+}
+#footer2{
+  background-color:#531f00;
+}
+
+.a1{
+  background-size:auto;
+ 
+}
+
+

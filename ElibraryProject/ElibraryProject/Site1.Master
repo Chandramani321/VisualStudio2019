@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ElibraryProject.Site1" 
+  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+  <%--Bootstrap css--%>
+  <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+   <%--DataTable css--%>
+  <link href="Datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
+   <%--FontAwesome css--%>
+  <link href="fontawsome/css/all.css" rel="stylesheet" />
+
+   <%--Jquery jquery--%>
+  <script src="Bootstrap/js/jquery-3.4.1.slim.min.js"></script>
+   <%--PRoper jquery--%>
+
+  <script src="Bootstrap/js/popper.min.js"></script>
+   <%--Bootstrap js--%>
+  <script src="Bootstrap/js/bootstrap.min.js"></script>
+  <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+  <form runat="server" id="form1">
+
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a href="#" class="navbar-brand">
+        <img src="images/Book.jpg" width="20" height="20" />
+        Elibrary
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <%--Drop down Toggle--%>
+      <li class="nav-item  dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" href="#" aria-haspopup="true" 
+          data-toggle="dropdown" aria-expanded="false">
+          Services
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+         <p class = "dropdown-header bg-light">Application</p>
+          <a class="dropdown-item" href="#">Oracle</a>
+          <a class="dropdown-item" href="#">MsSql</a>
+          <a class="dropdown-item" href="#">MySql</a>
+     
+        </div>
+      </li>  
+      </ul>
+     
+         <%--Using for another Unorder list--%>
+     <ul class="navbar-nav ms-xl-auto">
+       <li class="nav-item active">
+         <asp:LinkButton class="nav-link" runat="server" ID="linkButton3">
+           View Book
+         </asp:LinkButton>
+
+       </li>
+       <li class="nav-item active">
+         <asp:LinkButton class="nav-link" runat="server" ID="linkButton1">
+           Sign User
+         </asp:LinkButton>
+
+       </li>
+       <li class="nav-item active">
+         <asp:LinkButton class="nav-link" runat="server" ID="linkButton2">
+           Login
+         </asp:LinkButton>
+
+       </li>
+        <li class="nav-item active">
+         <asp:LinkButton class="nav-link" runat="server" ID="linkButton5">
+           Logout
+         </asp:LinkButton>
+
+       </li>
+      
+       <li class="nav-item active">
+         <asp:LinkButton class="nav-link" runat="server" ID="linkButton4">
+           Hello User
+         </asp:LinkButton>
+
+       </li>
+       
+     </ul>
+      </div>
+     
+  </nav>
+   
+    <div>
+          <asp:ContentPlaceHolder ID="contentPlaceholder1" runat="server">
+
+          </asp:ContentPlaceHolder>
+      </div>
+      <footer>
+          <div class="container-fluid" id="footer1">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <p>
+                  <asp:LinkButton class="footerlinks" ID="linkbutton6" runat="server">
+                    Admin Login
+                  </asp:LinkButton>
+                  <asp:LinkButton class="footerlinks" ID="linkbutton7" runat="server">
+                    Author Management
+                  </asp:LinkButton>
+                  <asp:LinkButton class="footerlinks" ID="linkbutton8" runat="server">
+                   Publisher Management
+                  </asp:LinkButton>
+                  <asp:LinkButton class="footerlinks" ID="linkbutton9" runat="server">
+                    Book Inventory
+                  </asp:LinkButton>
+                  <asp:LinkButton class="footerlinks" ID="linkbutton10" runat="server">
+                    Book Issuing
+                  </asp:LinkButton>
+                  <asp:LinkButton class="footerlinks" ID="linkbutton11" runat="server">
+                    Book Management
+                  </asp:LinkButton>
+                </p>
+              </div>
+            </div>
+          </div>
+        <div id="footer2" class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+              <p style="color:whitesmoke">&copy<b>All right Reserved.</b>
+                <a class="footerlinks" href="#" target="_blank">Simple Sinnpet</a>
+
+              </p>
+              </div>
+          </div>
+        </div>
+      </footer>
+     </form>
+</body>
+</html>
