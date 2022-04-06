@@ -1,0 +1,12 @@
+It only happens because all the controls are classes and on the server all the Control Objects are created and then after the round trip the Page is
+returned to the client's browser in HTML format and the objects are destroyed at the server.
+ 
+After the Submit button is clicked the value of user name and password is submitted to the server. We cannot restore the value again because after the postback the instance of the control is destroyed and on clicking of the Restore Button the 
+server takes a new request and the server cannot restore the value of the TextBox.
+
+===>Apply View State
+After clicking on the Submit Button the value of user name and password is submitted in View State and the View State stores the value of user name 
+and password during post-back.
+ 
+After click on the Restore Button we can get the value again. The Value must be retained during post-back and the values are stored into a base
+64 encoded string and this information is then put into the View State Hidden Field.
